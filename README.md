@@ -1,12 +1,13 @@
 # chatkpt-bq
-New revision of ChatKPT leveraging BigQuery ML.
-ChatKPT is an RAG program utilizing Vertex AI and Gemini 2.0 via BigQuery ML models in order to process, store, retrieve, and generate responses for queries provided as strings. ChatKPT can be deployed as an API endpoint utilizing [https://github.com/fastapi/fastapi](FastAPI).
+New revision of ChatKPT leveraging BigQuery ML.  
+ChatKPT is an RAG program utilizing Vertex AI and Gemini 2.0 via BigQuery ML models in order to process, store, retrieve, and generate responses for queries provided as strings.  
+ChatKPT can be deployed as an API endpoint utilizing [FastAPI.](https://github.com/fastapi/fastapi)  
 
 # Setup
-Ensure you have the [https://cloud.google.com/sdk/docs/install](Google Cloud CLI installed), and that you are [https://cloud.google.com/docs/authentication/gcloud](authenticated).  
+Ensure you have the []Google Cloud CLI installed](https://cloud.google.com/sdk/docs/install), and that you are [authenticated.](https://cloud.google.com/docs/authentication/gcloud)  
 Ensure your Google Cloud project has all relevant APIs (ie. Vertex AI API, BigQuery Connection API, etc.), enabled and that a Vertex AI connection has been set up with BigQuery (grant the service account the Vertex AI User permission).  
 On first start up run chatkpt.py with --update-db --initial-setup for first time run.  
-Afterwards, you can simply run with --update-db for updating the database.
+Afterwards, you can simply run with --update-db for updating the database.  
 
 # Variables
 Environment variables to be defined via dotenv:
@@ -22,7 +23,7 @@ Environment variables to be defined via dotenv:
 **GCS_BUCKET_NAME** - ID of bucket where documents to be processed are stored.  
 **GCS_FOLDER_PATH** - ID of folder in bucket where documents are stored, if any (leave as "" if N/A)  
 **EMBEDDING_MODEL_ENDPOINT** - Endpoint ID of Google embedding model that will be used (recommended to use "text-embedding-005")  
-**GENERATIVE_MODEL_ENDPOINT** - Endpoint ID of Google LLM that will be used. Refer to [https://cloud.google.com/bigquery/docs/reference/standard-sql/bigqueryml-syntax-create-remote-model](Google Cloud documentation) on available models and how to structure the endpoint (use of a global endpoint is recommended).
+**GENERATIVE_MODEL_ENDPOINT** - Endpoint ID of Google LLM that will be used. Refer to [Google Cloud documentation](https://cloud.google.com/bigquery/docs/reference/standard-sql/bigqueryml-syntax-create-remote-model) on available models and how to structure the endpoint (use of a global endpoint is recommended).  
 
 # Endpoints
 ChatKPT has two endpoints.
