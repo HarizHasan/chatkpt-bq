@@ -8,11 +8,26 @@ from pypdf import PdfReader
 import re
 import argparse
 import tiktoken
-from dotenv import load_dotenv
+from dotenv import find_dotenv, load_dotenv
+import os
 
+find_dotenv()
 load_dotenv()
 
 # --- Configuration ---
+PROJECT_ID = os.getenv("PROJECT_ID")
+LOCATION = os.getenv("LOCATION")
+DATASET_ID = os.getenv("DATASET_ID")
+KNOWLEDGE_BASE_TABLE_ID = os.getenv("KNOWLEDGE_BASE_TABLE_ID")
+EMBEDDING_TABLE_ID = os.getenv("EMBEDDING_TABLE_ID")
+EMBEDDING_MODEL_ID = os.getenv("EMBEDDING_MODEL_ID")
+GENERATIVE_MODEL_ID = os.getenv("GENERATIVE_MODEL_ID")
+CONNECTION_NAME = os.getenv("CONNECTION_NAME")
+GCS_BUCKET_NAME = os.getenv("GCS_BUCKET_NAME")
+GCS_FOLDER_PATH = os.getenv("GCS_FOLDER_PATH")
+EMBEDDING_MODEL_ENDPOINT = os.getenv("EMBEDDING_MODEL_ENDPOINT")
+GENERATIVE_MODEL_ENDPOINT = os.getenv("GENERATIVE_MODEL_ENDPOINT")
+
 TOP_K = 5
 MAX_OUTPUT_TOKENS = 1024
 TEMPERATURE = 1.0
