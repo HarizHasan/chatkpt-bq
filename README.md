@@ -1,6 +1,10 @@
 # chatkpt-bq
 New revision of ChatKPT leveraging BigQuery ML.
 
+# Setup
+On first start up run chatkpt.py with --update-db --initial-setup for first time run.
+Afterwards, you can simply run with --update-db for updating the database.
+
 # Variables
 Environment variables to be defined via dotenv:
 
@@ -14,5 +18,5 @@ Environment variables to be defined via dotenv:
 **CONNECTION_NAME** - ID of BigQuery-Vertex AI connection.  
 **GCS_BUCKET_NAME** - ID of bucket where documents to be processed are stored.  
 **GCS_FOLDER_PATH** - ID of folder in bucket where documents are stored, if any (leave as "" if N/A)  
-**EMBEDDING_MODEL_ENDPOINT** - Endpoint ID of Google embedding model that will be used (recommended "text-embedding-005")  
-**GENERATIVE_MODEL_ENDPOINT** - Endpoint ID of Google LLM that will be used (recommended "gemini-1.5-flash-002")  
+**EMBEDDING_MODEL_ENDPOINT** - Endpoint ID of Google embedding model that will be used (recommended to use "text-embedding-005")  
+**GENERATIVE_MODEL_ENDPOINT** - Endpoint ID of Google LLM that will be used (recommended to use "gemini-1.5-flash-002")  
