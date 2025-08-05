@@ -4,7 +4,7 @@ ChatKPT is an RAG program utilizing Vertex AI and Gemini 2.0 via BigQuery ML mod
 ChatKPT can be deployed as an API endpoint utilizing [FastAPI.](https://github.com/fastapi/fastapi)  
 
 # Setup
-Ensure you have the []Google Cloud CLI installed](https://cloud.google.com/sdk/docs/install), and that you are [authenticated.](https://cloud.google.com/docs/authentication/gcloud)  
+Ensure you have the [Google Cloud CLI installed](https://cloud.google.com/sdk/docs/install), and that you are [authenticated.](https://cloud.google.com/docs/authentication/gcloud)  
 Ensure your Google Cloud project has all relevant APIs (ie. Vertex AI API, BigQuery Connection API, etc.), enabled and that a Vertex AI connection has been set up with BigQuery (grant the service account the Vertex AI User permission).  
 On first start up run chatkpt.py with --update-db --initial-setup for first time run.  
 Afterwards, you can simply run with --update-db for updating the database.  
